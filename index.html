@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="icon" href="https://github.com/parth-kabra/TradeMark/master/blob/main/img/icons8-trademark-80.png?raw=true">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Wardrobe</title>
+	<link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'><!--===ICONS===-->
+	<link rel="stylesheet" href="/css/index.css">
+</head>
+<body>
+
+	<!--===CART===-->
+	<div data-include="/components/cart.html"></div>
+
+	<!--===HOME===-->
+	<div data-include="/components/home.html"></div>
+
+	<!--===COLLECTION ===-->
+	<div data-include="/components/collections.html"></div>
+
+	<!--===PRODUCTS===-->
+	<div data-include="/components/products.html"></div>
+
+	<!--===OFFER===-->
+	<div data-include="/components/offer.html"></div>
+
+	<br>
+
+	<!--===NEW ARRIVALS===-->
+	<div data-include="/components/newarrivals.html"></div>
+
+	<!--===NEWSLETTER===-->
+	<div data-include="/components/newsletter.html"></div>
+
+
+	<!--===FOOTER===-->
+	<div data-include="/components/footer.html"></div>
+
+	<!--===HEADER===-->
+	<header class="l-header">
+		<nav class="nav bd-grid">
+			<div onclick="rload()">
+				<a href="#" class="nav__logo text">Wardrobe</a>
+			</div>
+	
+			<div class="nav__menu" id="nav-menu">
+				<ul class="nav__list">
+					<li class="nav__item"><a href="#home" class="nav__link active">Home</a></li>
+					<li class="nav__item"><a href="#product" class="nav__link">Products</a></li>
+					<li class="nav__item"><a href="#new" class="nav__link">New</a></li>
+					<li class="nav__item"><a href="#suscribed" class="nav__link">Suscribed</a></li>
+				</ul>
+			</div>
+	
+			<div style="align-items: center;display:flex">
+				<i class='bx bx-cart nav__cart cart__items' onclick="openNav()"></i>
+				<i class='bx bx-user-plus cart__items nav__cart' id = "login" onclick="login()"></i>
+				<i class='bx bx-log-out cart__items nav__cart' id = "logout" onclick="logout()"></i>
+				<i class='bx bx-menu nav__toggle' id="nav-toggle"></i>
+			</div>
+		</nav>
+	</header>
+
+	<!--===MAIN JS===-->
+	<script src="/javascript/index.js"></script>
+	<script src="/javascript/firebase.js" type="module"></script>
+	<script src="/javascript/csi.min.js"></script>
+</body>
+</html>
