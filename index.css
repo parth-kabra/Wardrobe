@@ -272,6 +272,11 @@ img{
 	-webkit-text-fill-color: transparent;
 }
 
+.cart__product{
+	background-color: rgba(0, 0, 0, 0.403) !important;
+	
+}
+
 .product__product{
 	transition: .3s;
 }
@@ -395,7 +400,7 @@ a:hover{
 }
 /*<!--===FOOTER===-->*/
 .footer{
-	background-color: var(--dark-color);
+	background: linear-gradient(109.6deg, rgba(0, 0, 0, 0.93) 11.2%, rgb(63, 61, 61) 78.9%);
 	color: var(--white-color);
 }
 
@@ -421,6 +426,9 @@ a:hover{
 	color: var(--dark-color-light);
 }
 
+button{
+	border: none;
+}
 
 
 /*<!--===MEDIA QUERIES===-->*/
@@ -482,7 +490,7 @@ a:hover{
 	.collection__img{
 		width: 130px;
 	}
-
+	
 	.product__container,
 	.footer__container{
 		grid-template-columns: repeat(4,1fr);

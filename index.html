@@ -1,46 +1,319 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel="icon" href="https://github.com/parth-kabra/TradeMark/master/blob/main/img/icons8-trademark-80.png?raw=true">
+	<link rel="icon" href="https://github.com/parth-kabra/TradeMark/master/blob/mainimg/icons8-trademark-80.png?raw=true">
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-with, initial-scale=1.0">
 	<title>Wardrobe</title>
+	<script src="https://cdn.jsdelivr.net/npm/notiflix/dist/notiflix-aio-1.5.0.min.js"></script>
 	<link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'><!--===ICONS===-->
-	<link rel="stylesheet" href="/css/index.css">
+	<link rel="stylesheet" href="index.css">
+	<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
 </head>
 <body>
 
-	<!--===CART===-->
-	<div data-include="/components/cart.html"></div>
+	<div id="mySidebar" class="sidebar" ></div>
+	
+	<main class="l-main">
+		<section class="home" id="home">
+			<div class="home__container bd-grid" style="align-items: center;">
+				<img src="img/home.png" alt="" width="700" style="height: 500px; right: 0; position: absolute;" />
+				<div class="home__data" style="position: absolute;">
+					<h1 class="home__title">
+						NEW<br />
+						<span>LAUNCHES</span>
+					</h1>
+					<a href="#product" class="button">GO SHOPPING</a>
+				</div>
+			</div>
+		</section>
+	</main>
+	
+	<section class="collection section">
+		<div class="collection__container bd-grid">
+			<div class="collection__box">
+				<img src="img/table.png" alt="" width="230" class="collection_img"/>
+	
+				<p class="text">Filling the home with the beautiful creation of wood.</p>
+				
+			</div>
+	
+			<div class="collection__box">
+				
+				<p class="text">Change the look of your house, change the perspective of others</p>
+	
+				<img src="img/chair.png" alt="" width="230" class="collection__img">
+			</div>
+		</div>
+	</section>
 
-	<div data-include="components/home.html"></div>
+	<section class="product" id="product">
+		<h2 class="section-title">PRODUCTS</h2>
+		<br>
+		<div class="product__container bd-grid">
+			<div class="product__product">
+				<div class="product__box">
+					<img src="img/cupboard1.png" alt="" class="product__img"/>
+				</div>
+			<div class="product__data">
+				<h3 class="product__name">Wooden table with shelfs</h3>
+				<i class='bx bx-cart nav__cart button end ' onclick="addtoCart('wooden table with selfs', 99, 'img/cupboard1.png')" ></i>
+				<span class="product__preci">$99</span>
+			</div>	
+			
+			</div>
+	
+			<div class="product__product">
+				<div class="product__box">
+					<img src="img/stool.png" alt="" class="product__img"/>
+				</div>
+			<div class="product__data">
+				<h3 class="product__name">bar chair</h3>
+				<i class='bx bx-cart nav__cart button end ' onclick="addtoCart('bar chair', 99, 'img/stool.png')" ></i>
+				<span class="product__preci">$99</span>
+			</div>	
+			
+			</div>
+	
+			<div class="product__product">
+				<div class="product__box">
+					<img src="img/chair1.png" alt="" class="product__img"/>
+				</div>
+			<div class="product__data">
+				<h3 class="product__name">wooden chair</h3>
+				<i class='bx bx-cart nav__cart button end ' onclick="addtoCart('wooden chair', 99, 'img/chair1.png')" ></i>
+				<span class="product__preci">$99</span>
+			</div>	
+			
+			</div>
+	
+			<div class="product__product">
+				<div class="product__box">
+					<img src="img/rocking chair.png" alt="" class="product__img"/>
+				</div>
+			<div class="product__data">
+				<h3 class="product__name">rocking chair</h3>
+				<i class='bx bx-cart nav__cart button end ' onclick="addtoCart('rocking chair', 99, 'img/rocking chair.png')" ></i>
+				<span class="product__preci">$99</span>
+			</div>	
+			
+			</div>
+	
+			<div class="product__product">
+				<div class="product__box">
+					<img src="img/table2.png" alt="" class="product__img"/>
+				</div>
+			<div class="product__data">
+				<h3 class="product__name">wooden table</h3>
+				<i class='bx bx-cart nav__cart button end ' onclick="addtoCart('wooden table', 99, 'img/table2.png')" ></i>
+				<span class="product__preci">$99</span>
+			</div>	
+			
+			</div>
+	
+			<div class="product__product">
+				<div class="product__box">
+					<img src="img/sofa.png" alt="" class="product__img"/>
+				</div>
+			<div class="product__data">
+				<h3 class="product__name">sofa</h3>
+				<i class='bx bx-cart nav__cart button end ' onclick="addtoCart('sofa', 99, 'img/sofa.png')" ></i>
+				<span class="product__preci">$99</span>
+			</div>	
+			
+			</div>
+	
+			<div class="product__product">
+				<div class="product__box">
+					<img src="img/table3.png" alt="" class="product__img"/>
+				</div>
+			<div class="product__data">
+				<h3 class="product__name">wooden table</h3>
+				<i class='bx bx-cart nav__cart button end ' onclick="addtoCart('wooden table', 99, 'img/table3.png')" ></i>
+				<span class="product__preci">$99</span>
+			</div>	
+			
+			</div>
+	
+			<div class="product__product">
+				<div class="product__box">
+					<img src="img/cofee table.png" alt="" class="product__img"/>
+				</div>
+			<div class="product__data">
+				<h3 class="product__name">small wooden table</h3>
+				<i class='bx bx-cart nav__cart button end ' onclick="addtoCart('small wooden table', 99, 'img/cofee table.png')" ></i>
+				<span class="product__preci">$99</span>
+			</div>	
+			
+			</div>
+	
+			<div class="product__product">
+				<div class="product__box">
+					<img src="img/sofa1.png" alt="" class="product__img"/>
+				</div>
+			<div class="product__data">
+				<h3 class="product__name">sofa</h3>
+				<i class='bx bx-cart nav__cart button end ' onclick="addtoCart('sofa', 99, 'img/sofa1.png')" ></i>
+				<span class="product__preci">$99</span>
+			</div>	
+			
+			</div>
+	
+			<div class="product__product">
+				<div class="product__box">
+					<img src="img/table4.png" alt="" class="product__img"/>
+				</div>
+			<div class="product__data">
+				<h3 class="product__name">wooden table</h3>
+				<i class='bx bx-cart nav__cart button end ' onclick="addtoCart('wooden table', 99, 'img/table4.png')" ></i>
+				<span class="product__preci">$99</span>
+			</div>	
+			
+			</div>
+	
+			<div class="product__product">
+				<div class="product__box">
+					<img src="img/bar chair.png" alt="" class="product__img"/>
+				</div>
+			<div class="product__data">
+				<h3 class="product__name">bar chair</h3>
+				<i class='bx bx-cart nav__cart button end ' onclick="addtoCart('bar chair', 99, 'img/bar chair.png')" ></i>
+				<span class="product__preci">$99</span>
+			</div>	
+			
+			</div>
+	
+			<div class="product__product">
+				<div class="product__box">
+					<img src="img/cupboard2.png" alt="" class="product__img"/>
+				</div>
+			<div class="product__data">
+				<h3 class="product__name">cupboard</h3>
+				<i class='bx bx-cart nav__cart button end ' onclick="addtoCart('cupboard', 99, 'img/cupboard2.png')" ></i>
+				<span class="product__preci">$99</span>
+			</div>	
+			
+			</div>
+	
+		</div>
+	</section>
 
-	<!--===COLLECTION ===-->
-	<div data-include="/components/collections.html"></div>
-
-	<!--===PRODUCTS===-->
-	<div data-include="/components/products.html"></div>
-
-	<!--===OFFER===-->
-	<div data-include="/components/offer.html"></div>
-
+	<section class="offer">
+		<div class="offer__bg">
+			<div class="offer__data">
+				<h2 class="offer__title">Special Offer</h2>
+				<p class="offer__description">Special offers and discounts for women coming soon !</p>
+				<a class="button">SHOP NOW</a>
+			</div>
+		</div>
+	</section>
 	<br>
 
-	<!--===NEW ARRIVALS===-->
-	<div data-include="/components/newarrivals.html"></div>
+	<section class="product" id = "product">
+		<h2 class="section-title">NEW LAUNCHES</h2>
+		<br>
+		<div class="product__container bd-grid">
+			<div class="product__product">
+				<div class="product__box">
+					<div class="product__new">NEW</div>
+					<img src="img/chair.png" alt=""/>
+					
+				</div>
+			<div class="product__data">
+				<h3 class="product__name">SOFA CHAIR</h3>
+				<i class='bx bx-cart nav__cart button ' onclick="addtoCart('sofa chair', 99, 'img/chair.png')"></i>
+				<span class="product__preci">$99</span>
+			</div>
+				
+			</div>
+	
+			<div class="product__product">
+				<div class="product__box">
+					<div class="product__new">NEW</div>
+					<img src="img/cupboard.png" alt=""/>
+				</div>
+			<div class="product__data">
+				<h3 class="product__name">tv table</h3>
+				<i class='bx bx-cart nav__cart button ' onclick="addtoCart('tv table', 99, 'img/cupboard.png')"></i>
+				<span class="product__preci">$99</span>
+			</div>
+			
+			</div>
+	
+			<div class="product__product">
+				<div class="product__box">
+					<div class="product__new">NEW</div>
+					<img src="img/sofa.png" alt="" class="product__img"/>
+				</div>
+			<div class="product__data">
+				<h3 class="product__name">sofa</h3>
+				<i class='bx bx-cart nav__cart button end ' onclick="addtoCart('sofa', 99, 'img/sofa.png')" ></i>
+				<span class="product__preci">$99</span>
+			</div>	
+			
+			</div>
+	
+			<div class="product__product">
+				<div class="product__box">
+					<div class="product__new">NEW</div>
+					<img src="img/table1.png" alt="" class="product__img"/>
+				</div>
+			<div class="product__data">
+				<h3 class="product__name">wooden table</h3>
+				<i class='bx bx-cart nav__cart button end ' onclick="addtoCart('wooden table', 99, 'img/table1.png')" ></i>
+				<span class="product__preci">$99</span>
+			</div>	
+			
+			</div>
+		</div>
+	</section>
 
-	<!--===NEWSLETTER===-->
-	<div data-include="/components/newsletter.html"></div>
+	<section class="newsletter section" id="suscribed">
+		
+		<div class="newsletter__container bd-grid">
+			<div class="newsletter__suscribe">
+				<h2 class="section-title">OUR NEWSLETTER</h2>
+				<p class="newsletter__description">Promotion new products and sales. Directly to your</p>
+	
+				<form action="" class="newsletter__form">
+					<input type="" class="newsletter__input" placeholder="Enter your email">
+					<a class="button-1">SUSCRIBE</a>
+				</form>
+			</div>
+		</div>	
+	</section>
 
+	<footer class="footer section">
+		<div class="footer__container bd-grid">
+			<div class="footer__box">
+				<h3 class="footer__title">Made with ❤️ by<br><span><a class="text" href="https://github.com/parth-kabra" target="_blank">@parth-kabra</a></span></h3>
+			</div>
+	
+			<div class="footer__box">
+				<h3 class="footer__title">EXPLORE</h3>
+				<ul>
+					<li><a href="#home" class="footer__link">Home</a></li>
+					<li><a href="#product" class="footer__link">product</a></li>
+					<li><a href="#new" class="footer__link">New</a></li>
+					<li><a href="#suscribed" class="footer__link">Suscribe</a></li>
+				</ul>
+			</div>
+	
+			<div class="footer__box">
+				<h3 class="footer__title">OUR SERVICES</h3>
+				<ul>
+					<li><a  class="footer__link">Pricing</a></li>
+					<li><a  class="footer__link">Free Shipping</a></li>
+					<li><a  class="footer__link">Gift Cards</a></li>
+				</ul>
+			</div>
+		</div>
+	</footer>
 
-	<!--===FOOTER===-->
-	<div data-include="/components/footer.html"></div>
-
-	<!--===HEADER===-->
 	<header class="l-header">
 		<nav class="nav bd-grid">
-			<div onclick="rload()">
-				<a href="#" class="nav__logo text">Wardrobe</a>
+			<div>
+				<a href="" class="nav__logo text">Wardrobe</a>
 			</div>
 	
 			<div class="nav__menu" id="nav-menu">
@@ -53,7 +326,7 @@
 			</div>
 	
 			<div style="align-items: center;display:flex">
-				<i class='bx bx-cart nav__cart cart__items' onclick="openNav()"></i>
+				<i class='bx bx-cart nav__cart cart__items' onclick="openNav(), loadCart()"></i>
 				<i class='bx bx-user-plus cart__items nav__cart' id = "login" onclick="login()"></i>
 				<i class='bx bx-log-out cart__items nav__cart' id = "logout" onclick="logout()"></i>
 				<i class='bx bx-menu nav__toggle' id="nav-toggle"></i>
@@ -61,9 +334,7 @@
 		</nav>
 	</header>
 
-	<!--===MAIN JS===-->
-	<script src="/javascript/index.js"></script>
-	<script src="/javascript/firebase.js" type="module"></script>
-	<script src="/javascript/csi.min.js"></script>
+	<script src="index.js"></script>
+	<script src="firebase.js" type="module"></script>
 </body>
 </html>
