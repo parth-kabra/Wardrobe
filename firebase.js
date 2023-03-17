@@ -3,13 +3,7 @@ import { getAuth, GoogleAuthProvider, signInWithPopup, signOut } from "https://w
 import { getDatabase, ref, set, get, child, remove} from "https://www.gstatic.com/firebasejs/9.4.1/firebase-database.js";
 
 const firebaseConfig = {
-    apiKey: "AIzaSyCCeJLFYX8rj5KrTe5uyfxTtpr8prl8v5k",
-    authDomain: "wardrobe-7bde3.firebaseapp.com",
-    projectId: "wardrobe-7bde3",
-    storageBucket: "wardrobe-7bde3.appspot.com",
-    messagingSenderId: "437660575231",
-    appId: "1:437660575231:web:e7cba51ecc0dd3299973ca",
-    measurementId: "G-3XZC893GQ8"
+
 };
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
